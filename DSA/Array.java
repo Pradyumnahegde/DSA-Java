@@ -1,4 +1,4 @@
-/* Array (static vs dynamic array implementation) -> array insert, insertat, deleteat, indexof,
+/* Array (static vs dynamic array implementation) -> array insert, insert_at, delete_at, index_of,
 display, reverse array, intersect(find same elements in 2 arrays), max and min.
 */
 public class Main {
