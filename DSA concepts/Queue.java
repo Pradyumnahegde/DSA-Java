@@ -2,7 +2,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.Arrays;
 
-public class ArrayQueue {
+public class ArrayQueue {         // Implementation of queues using arrays.
 
     private int[] array = new int[5]; // can also use constuctor to set size or length.
     private int front,rear;
