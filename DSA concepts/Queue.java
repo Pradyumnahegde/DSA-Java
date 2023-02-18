@@ -1,6 +1,52 @@
 import java.util.ArrayDeque;
 import java.util.Queue;
+import java.util.Arrays;
 
+public class ArrayQueue {
+
+    private int[] array = new int[5]; // can also use constuctor to set size or length.
+    private int front,rear;
+    private int size;
+
+    public void enqueue(int item){
+        if(size == array.length) throw new ArrayIndexOutOfBoundsException();   // queue is full
+
+        array[rear++] = item;
+        size++;
+    }
+
+    public void dequeue(){
+        if(front == rear) throw new ArrayIndexOutOfBoundsException();    // queue is empty and dequeued index cant be refilled again in simple queues.
+
+        int del = array[front];
+        array[front] = 0;
+        front++;
+        size--;
+        System.out.println("del = "+del);
+    }
+
+    @Override
+    public String toString(){
+        return  Arrays.toString(array);
+    }
+
+
+    public static void main(String[] args) {
+
+        ArrayQueue queue = new ArrayQueue();
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.dequeue();
+        queue.dequeue();
+        System.out.println(queue);
+
+// also include isEmpty and peek methods.      - O(1) time complexity
+    }
+
+}
+         // Java queues using ArrayDeque<> 
+/*
 public class Queues {
     public static void main(String[] args) {
 
@@ -20,3 +66,4 @@ public class Queues {
     }
 
 }
+*/
